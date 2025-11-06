@@ -54,8 +54,8 @@ class GuildedRose:
                 continue
             
             daily_change = self.LESS_THAN_EQUAL_TO_DAILY_QUALITY_CHANGE[item_type]
-
-            for threshold in sorted(daily_change.keys(), reverse=True):
+            quality_change = 0
+            for threshold in sorted(daily_change.keys()):
                 if item.sell_by_days <= threshold:
                     quality_change = daily_change[threshold]
                     break

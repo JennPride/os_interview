@@ -1,8 +1,8 @@
 import pytest
-from rose import GuildedRose, Item
+from rose import Item, GuildedRose
 
 def test_default_item():
-    # Default item decreases quality by 1 when sell_by_days > 0
+    # Default item decreases quality by 1 when sell_by_days <= 0
     item_1 = Item("Random", 0, 10)
     # Should not change
     item_2 = Item("Another", 5, 20)
